@@ -1,0 +1,50 @@
+{
+  "name": "rpi-ws281x-local",
+  "version": "1.0.0",
+  "description": "Local mock of rpi-ws281x module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest -c jest.config.json --passWithNoTests",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quarties/rpi-ws281x-local.git"
+  },
+  "keywords": [
+    "nodejs",
+    "fastify",
+    "rpi-ws281x",
+    "ws281x"
+  ],
+  "author": "Michał 'Quarties' Sypko <michals013@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/quarties/rpi-ws281x-local/issues"
+  },
+  "homepage": "https://github.com/quarties/rpi-ws281x-local#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-jest": "^26.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-jsdoc": "^30.6.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "esm": "^3.2.25",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint -- --fix",
+      "pre-push": "npm run lint && npm run test"
+    }
+  }
+}
